@@ -2,7 +2,10 @@ import {axiosInstance} from '../../config/axiosInstance';
 import {
   getMovieCastError,
   getMovieCastStart,
-  getMovieCastSuccess, getMovieImageError, getMovieImageStart, getMovieImageSuccess,
+  getMovieCastSuccess,
+  getMovieImageError,
+  getMovieImageStart,
+  getMovieImageSuccess,
   getMovieInfoError,
   getMovieInfoStart,
   getMovieInfoSuccess,
@@ -21,7 +24,6 @@ import {
   getUpcomingMoviesError,
   getUpcomingMoviesStart,
   getUpcomingMoviesSuccess,
-  searchMovieError,
   searchMovieStart,
   searchMovieSuccess
 } from '../actions/movieActions';
@@ -63,7 +65,7 @@ export const searchMovie = (name) => async dispatch => {
     const response = await axiosInstance.get(`/search/movie?api_key=${API_KEY}&query=${name}&page=1`);
     dispatch(searchMovieSuccess(response.data.results));
   } catch (e) {
-    dispatch(searchMovieError(e));
+    // dispatch(searchMovieError(e));
   }
 }
 

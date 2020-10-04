@@ -144,7 +144,7 @@ const MovieDetailPage = () => {
             {loading ? <Skeleton width={700} height={400} className={classes.skeleton} variant="rect" animation="wave"/>
               :
               <iframe className={classes.video} title={movieInfo.title} height="400"
-                      src={'https://www.youtube.com/embed/' + video.key} frameBorder="0"
+                      src={'https://www.youtube.com/embed/' + video?.key} frameBorder="0"
                       allow="accelerometer; autoplay;  encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen/>}
           </Grid>
