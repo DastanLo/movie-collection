@@ -1,6 +1,6 @@
 import React from 'react';
 import MoviesPage from './containers/MoviesPage';
-import {Route, Switch} from 'react-router-dom';
+import {Route, Redirect, Switch} from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,11 +11,12 @@ const App = () => {
     <>
       <CssBaseline/>
       <Header/>
-        <Switch>
-          <Route path="/" exact component={MoviesPage}/>
-          <Route path="/genre/:id" exact component={MoviesPage}/>
-          <Route path="/movie/detail/:id" exact component={MovieDetailPage}/>
-        </Switch>
+      <Switch>
+        <Route path="/" exact component={MoviesPage}/>
+        <Route path="/genre/:id" exact component={MoviesPage}/>
+        <Route path="/movie/detail/:id" exact component={MovieDetailPage}/>
+        <Redirect to="/"/>
+      </Switch>
       <Footer/>
     </>
   );
