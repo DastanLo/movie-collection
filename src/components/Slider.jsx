@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: '25px',
+    margin: '0 auto'
   },
   header: {
     display: 'flex',
@@ -30,9 +31,10 @@ const useStyles = makeStyles((theme) => ({
     },
     height: '300px',
     display: 'block',
-    maxWidth: '100%',
+    maxWidth: '1280px',
     overflow: 'hidden',
     width: '100%',
+    margin: '0 auto'
   },
 }));
 
